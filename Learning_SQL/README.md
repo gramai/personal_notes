@@ -40,7 +40,6 @@ Some of the things I find useful in my learning process are summarized here.
 ```
 mysql-ctl start;
 mysql-ctl stop;
-
 ```
 
 **Start/stop MySQL Interactive Shell**
@@ -48,7 +47,6 @@ mysql-ctl stop;
 ```
 mysql-ctl cli;
 exit;
-
 ```
 
 
