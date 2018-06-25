@@ -89,14 +89,28 @@ CREATE TABLE <table_name>; # Creates a table in the current database
 ```
 
 **READ**
-Retrieves columns _without condition_
+Retrieve columns _without condition_
 ```
 SELECT * FROM <table_name>; # retrieves all columns from the chosen table
 SELECT <field1>, <field2>,...,<fieldN> FROM <table_name>; # retrieves chosen columns from the chosen table
 ```
-_Retrieves columns _with contidion_
+Retrieve columns _with contidion_
 ```
 SELECT * FROM <table_name> WHERE <field_value> = value; # <field_value> = value means that the value present in a certain field is equal to the given value
+```
+Retrieve specified column under _a different name (Alias)_
+```
+SELECT <column_name> as <ALIAS> from <table_name>;
+```
+
+**UPDATE**
+```
+UPDATE <table_name> SET field=value_to_set WHERE <field_value> = value_to_update;
+```
+
+**Delete**
+```
+DELETE FROM <table_name> WHERE <field_value> = value;
 ```
 
 **Insert DATA into a table**
