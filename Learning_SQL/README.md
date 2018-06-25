@@ -81,22 +81,32 @@ USE <database_name>;
 SELECT database();
 ```
 
+**SQL Files**
+- SQL files have the .sql extension
+- SQL files can be run from within a SQL environment using the _source_ command
+
+_**Example**_
+```
+source file_name.sql; -- This is valid only if the file exists in the working directory
+source path_to_file/file_name.sql; 
+```
+
 ### CRUD summary ###
 **CREATE**
 ``` 
-CREATE DATABASE <database_name>; # Creates a database
-CREATE TABLE <table_name>; # Creates a table in the current database 
+CREATE DATABASE <database_name>; -- Creates a database
+CREATE TABLE <table_name>; -- Creates a table in the current database 
 ```
 
 **READ**
 Retrieve columns _without condition_
 ```
-SELECT * FROM <table_name>; # retrieves all columns from the chosen table
-SELECT <field1>, <field2>,...,<fieldN> FROM <table_name>; # retrieves chosen columns from the chosen table
+SELECT * FROM <table_name>; -- retrieves all columns from the chosen table
+SELECT <field1>, <field2>,...,<fieldN> FROM <table_name>; -- retrieves chosen columns from the chosen table
 ```
 Retrieve columns _with contidion_
 ```
-SELECT * FROM <table_name> WHERE <field_value> = value; # <field_value> = value means that the value present in a certain field is equal to the given value
+SELECT * FROM <table_name> WHERE <field_value> = value; -- <field_value> = value means that the value present in a certain field is equal to the given value
 ```
 Retrieve specified column under _a different name (Alias)_
 ```
@@ -123,10 +133,10 @@ Multiple entries can be inserted with only one comand at once, separated by coma
 _**Example**_
 
 ```
-CREATE DATABASE test_db; # Creates a database called test_db
-USE test_db; # Sets test_db as current database
-CREATE TABLE example_table (value INT, name VARCHAR (50) DEFAULT "NO_NAME"); # Creates a table in test_db
-INSERT INTO example_table(value, name) VALUES (25, 'Buck'),(13, 'Deer'); #Inserts two entries in the example_table
+CREATE DATABASE test_db; -- Creates a database called test_db
+USE test_db; -- Sets test_db as current database
+CREATE TABLE example_table (value INT, name VARCHAR (50) DEFAULT "NO_NAME"); -- Creates a table in test_db
+INSERT INTO example_table(value, name) VALUES (25, 'Buck'),(13, 'Deer'); -- Inserts two entries in the example_table
 ```
 
 **Set a MANDATORY field (not NULL)**
