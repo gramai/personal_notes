@@ -1,6 +1,6 @@
-# x86-Win-NASM
+# ~ Learning x86-Win-NASM ~
 This is a repository containing some of the projects I have worked on during the 
-second semester of my first year at the university. All code is 100% written by me.
+second semester of my first year at the university. All code is 100% written by me. 
 
 This code runs with an Assembly x86 emulator. I have used emu8086 for this. You can find and download the 
 40 day trial [here](http://www.emu8086.com/)
