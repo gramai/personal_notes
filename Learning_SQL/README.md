@@ -1,8 +1,10 @@
-# My Personal Notes ~ Learning SQL ~
+# ~ Learning SQL ~
+
+### Description
+I love learning new things but I can't help forgetting some. This is why I do this short summaries in a 'cheatsheet' like manner, to be able to keep all important details in one place. 
 
 ## Tips and Tricks
-
-Some of the things I find useful in my learning process are summarized here.
+Short tips and tricks that get the SQL work flowing.
 
 ## Theoretical Bulletpoints
 
