@@ -3,8 +3,14 @@
 ### Description
 I love learning new things but I can't help forgetting some. This is why I do this short summaries in a 'cheatsheet' like manner, to be able to keep all important details in one place. 
 
+# Contents 
+
+| #   | Name                              | Programming Language    | Link                                           |
+| --- | --------------------------------- | ----------------------- | ---------------------------------------------- |
+| 1   | My first SQL problem              | SQL                     | [Github](./src/shirts_db.sql)                  |
+
 ## Tips and Tricks
-Short tips and tricks that get the SQL work flowing.
+Short tips and tricks that got the SQL work flowing (for me).
 
 ## Theoretical Bulletpoints
 
