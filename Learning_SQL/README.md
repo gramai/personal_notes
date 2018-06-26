@@ -242,12 +242,14 @@ SELECT <column_name> FROM <column_table> WHERE <column_name> LIKE '<pattern>';
 ```
 - **WILDCARDS** can be used ('%') in combination with strings; 
 - they have the meaning of "anything goes" before the specified string or after
+
 _Example:_
 ```
 SELECT author_name FROM database WHERE author_name LIKE "%david%";-- will return all author names that contain the name David
 ```
 
 - **"_" (underscore)** can also be used that replaces a character/ "\__" (2 underscores) replace 2 characters and so on
+
 _Example:_
 ```
 SELECT author_name FROM database WHERE author_name LIKE "%Andre_";
@@ -255,6 +257,7 @@ SELECT author_name FROM database WHERE author_name LIKE "%Andre_";
 ```
 **NOTE:** 
 - If a searched value contains special characters (such as "%" or "_"), an ESCAPE CHARACTER can be used "\" (backslash)
+
 _Example:_
 ```
 SELECT title FROM database WHERE title LIKE "%100\%%";
