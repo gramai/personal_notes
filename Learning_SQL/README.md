@@ -109,11 +109,11 @@ CREATE TABLE <table_name>; -- Creates a table in the current database
 Retrieve columns _without condition_
 ```
 SELECT * FROM <table_name>; -- retrieves all columns from the chosen table
-SELECT <field1>, <field2>,...,<fieldN> FROM <table_name>; -- retrieves chosen columns from the chosen table
+SELECT <column_name1>, <column_name2>,...,<column_nameN> FROM <table_name>; -- retrieves chosen columns from the chosen table
 ```
 Retrieve columns _with contidion_
 ```
-SELECT * FROM <table_name> WHERE <field_value> = value; -- <field_value> = value means that the value present in a certain field is equal to the given value
+SELECT * FROM <table_name> WHERE <column_name> = value; -- <column_name> = value means that the value present in a certain column is equal to the given value
 ```
 Retrieve specified column under _a different name (Alias)_
 ```
@@ -144,12 +144,12 @@ SELECT REPLACE (string, pattern_to_replace, replace_string) FROM <table_name>; -
 
 **UPDATE**
 ```
-UPDATE <table_name> SET field=value_to_set WHERE <field_value> = value_to_update;
+UPDATE <table_name> SET <column_name>=value_to_set WHERE <column_name> = value_to_update;
 ```
 
 **DELETE**
 ```
-DELETE FROM <table_name> WHERE <field_value> = value;
+DELETE FROM <table_name> WHERE <column_name> = value;
 ```
 
 **Insert DATA into a table**
@@ -168,28 +168,28 @@ CREATE TABLE example_table (value INT, name VARCHAR (50) DEFAULT "NO_NAME"); -- 
 INSERT INTO example_table(value, name) VALUES (25, 'Buck'),(13, 'Deer'); -- Inserts two entries in the example_table
 ```
 
-**Set a MANDATORY field (not NULL)**
+**Set a MANDATORY column (not NULL)**
 ``` 
-CREATE TABLE <test_table_name1> (<field_name1> <data_type> NOT NULL)
+CREATE TABLE <test_table_name1> (<column_name1> <data_type> NOT NULL)
 ```
 
-**Set a DEFAULT value for a table field**
+**Set a DEFAULT value for a table column**
 ``` 
-CREATE TABLE <test_table_name2> (<field_name1> <data_type>,<field_name2> <data_type> DEFAULT <default_value_of_same_data_type_as_field2> );
+CREATE TABLE <test_table_name2> (<column_name1> <data_type>,<column_name2> <data_type2> DEFAULT <default_value_of_same_data_type_as_column_name2> );
 ```
 
 **Set a PRIMARY KEY**
 ```
-CREATE TABLE <test_table_name3>( <field_name1> <data_type>, <field_name2> <data_type> , PRIMARY KEY(field_number_of_choice));
+CREATE TABLE <test_table_name3>( <column_name1> <data_type1>, <column_name2> <data_type2> , PRIMARY KEY(column_name_of_choice));
 ```
 _**ALSO VALID**_
 
 ```
-CREATE TABLE <test_table_name4>( <field_name1> <data_type> PRIMARY KEY, <field_name2> <data_type>  );
+CREATE TABLE <test_table_name4>( <column_name1> <data_type1> PRIMARY KEY, <column_name2> <data_type2>  );
 ```
-**Create a table with an ID Field (with AUTO_INCREMENT)**
+**Create a table with an ID COLUMN (with AUTO_INCREMENT)**
 ```
-CREATE TABLE <test_table_name5> (<field_name1> INT AUTO_INCREMENT PRIMARY KEY, <field_name2> <data_type> );
+CREATE TABLE <test_table_name5> (<column_name1> INT AUTO_INCREMENT PRIMARY KEY, <column_name2> <data_type2> );
 ```
 
 ## USEFUL FUNCTIONS
@@ -208,6 +208,55 @@ _Example_
 ```
 SELECT UPPER(<column_name>) FROM <table_name>;
 ```
+**DISTINCT**
+Returns only the unique (distinct) values.
+```
+SELECT DISTINCT <column_name> FROM <table_name>;
+```
 
+**ORDER BY**
+Returns values in ascending(DEFAULT) or descending (DESC) order.
+```
+SELECT <column_name> FROM <table_name> ORDER BY <CHOSEN_column_name>;--ASCENDING ORDER
+SELECT <column_name> FROM <table_name> ORDER BY <CHOSEN_column_name> DESC;--DESCENDING ORDER
+-- OBSERVATIONS! CHOSEN_column_name is the column by which the results are sorted.
 
+SELECT <column_name1>, <column_name2>,...,<column_nameN> ORDER BY M; -- M <= N, the results are ordered by the M-th column
+```
 
+**LIMIT**
+Limits the number retrieved values.
+```
+SELECT <column_name> FROM <table> LIMIT N;--N = number of rows to show;  N <= total entries
+
+SELECT <column_name> FROM <table> LIMIT <start_ind>, N;
+--start_ind is the indice of the first retrieved value; start_ind >=0
+--N = number of rows to show;  N <= total entries
+```
+
+**LIKE**
+Returns the values that are similar to a given pattern.
+
+```
+SELECT <column_name> FROM <column_table> WHERE <column_name> LIKE '<pattern>';
+```
+- **WILDCARDS** can be used ('%') in combination with strings; 
+- they have the meaning of "anything goes" before the specified string or after
+_Example:_
+```
+SELECT author_name FROM database WHERE author_name LIKE "%david%";-- will return all author names that contain the name David
+```
+
+- **"_" (underscore)** can also be used that replaces a character/ "\__" (2 underscores) replace 2 characters and so on
+_Example:_
+```
+SELECT author_name FROM database WHERE author_name LIKE "%Andre_";
+-- possible names can include names such as "Andrew", "Andrea", "Andres"
+```
+**NOTE:** 
+- If a searched value contains special characters (such as "%" or "_"), an ESCAPE CHARACTER can be used "\" (backslash)
+_Example:_
+```
+SELECT title FROM database WHERE title LIKE "%100\%%";
+-- returns titles containing "100%"
+```
