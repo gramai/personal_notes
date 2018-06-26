@@ -45,14 +45,22 @@ Short tips and tricks that got the SQL work flowing (for me).
 
 ### NOTES about Data Types
 _**DECIMAL**_
-
+- Most precise, fixed-point type -> calculations are exact.
 Syntax:
 ```
 <column_name> DECIMAL(N,M);
 ```
 - N = total number of digits the decimal number could contain
 - M = digits after decimal point
-- 
+
+_**Float**_
+- Loses precision at ~7 digits. Floating-point type.
+- take up 4 Bytes of memory
+
+_**Double**_
+- Loses precision at ~14 digits. Floating-point type.
+-take up 8 Bytes of memory
+
 ## Useful Commands
 
 ### For Cloud9
