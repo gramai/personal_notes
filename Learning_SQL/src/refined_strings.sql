@@ -3,13 +3,13 @@
 1.Select All Story Collections 
  Titles  That contain 'stories'
 */
-
 SELECT title FROM books WHERE title LIKE '%stories%';
 
 -----------------------------------------------------------------------
 
 
 -----------------------------------------------------------------------
+
 /*
 2.Find The Longest Book
 Print Out the Title and Page Count
@@ -20,6 +20,7 @@ SELECT title, pages FROM books ORDER BY pages DESC LIMIT 1;
 
 
 -----------------------------------------------------------------------
+
 /*
 3.Print a summary containing the title and year, for the 3 most recent books
 with the format "<Title> - <release_year>"
@@ -38,6 +39,7 @@ SELECT
 
 
 -----------------------------------------------------------------------
+
 /*
 4.Find all books with an author_lname
 that contains a space(" ")
@@ -49,6 +51,7 @@ SELECT title,author_lname FROM books
 
 
 -----------------------------------------------------------------------
+
 /*
 5.Find The 3 Books With The Lowest Stock
 Select title, year, and stock
@@ -60,6 +63,7 @@ SELECT title, released_year, stock_quantity FROM books
 
 
 -----------------------------------------------------------------------
+
 /*
 6.Print title and author_lname, sorted first by author_lname and then by title
 */    
@@ -70,6 +74,7 @@ SELECT title, author_lname FROM books
 
 
 -----------------------------------------------------------------------
+
 /*
 7.Print your favorite books Sorted Alphabetically By Last Name of the author
 with the format "MY FAVORITE AUTHOR IS <author_full_name> !"
