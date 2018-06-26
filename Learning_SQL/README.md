@@ -14,6 +14,9 @@ I love learning new things but I can't help forgetting some. This is why I do th
 ## Tips and Tricks
 Short tips and tricks that got the SQL work flowing (for me).
 
+## General Observations
+- the string "<column_name1>, <column_name2>,...,<column_nameN>" (or similar) appears in some cases and it means that any existent column can or not be chosen (depends on the case). Minimum chosen column is one.
+
 ## Theoretical Bulletpoints
 
 - a Database is a collection of data
@@ -22,7 +25,6 @@ Short tips and tricks that got the SQL work flowing (for me).
 - in use Database = structured set of computerized data with an accessible interface
 - DBMS are valuable because of the unique features they offer
 - All data is stored in Tables (columns and rows)
-
 
 ## Data Types
 
@@ -195,6 +197,8 @@ CREATE TABLE <test_table_name5> (<column_name1> INT AUTO_INCREMENT PRIMARY KEY, 
 
 ## USEFUL FUNCTIONS
 
+Some of the most common (and useful) functions in SQL.
+
 **CHAR_LENGTH()**
 
 _Example_
@@ -263,4 +267,39 @@ _Example:_
 ```
 SELECT title FROM database WHERE title LIKE "%100\%%";
 -- returns titles containing "100%"
+```
+
+### AGGREGATE FUNCTIONS
+Aggregate Functions are functions that perform a calculation on a set of values, and returns a single value.
+
+**COUNT**
+_Example:_
+
+``` SELECT COUNT (*) FROM <table_name>;-- counts the number of entries in a table
+```
+**GROUP BY**
+GROUP BY summarizes or aggregates identical data into singel rows. Other functions can be afterwards used, to obtained helpful results (functions such as COUNT).
+_Example:_
+```
+SELECT <column_name1> FROM <table_name> GROUP BY <chosen_column_name>; -- only shows first element of the group
+
+SELECT <column_name1>, <column_name2>, COUNT(*) FROM <table_name> GROUP BY <chosen_column_name1>, <chosen_column_name2>;
+-- Each group contains elements that have the same first chosen column value and second chosen column value.
+-- The third column will contain the number of elements from each group.
+```
+
+**MIN/MAX**
+```
+SELECT MIN(<chosen_column_name>) FROM <table_name>;
+```
+
+**SUM**
+```
+SELECT SUM(<chosen_column_name>) FROM <table_name>;
+```
+
+**AVG**
+Returns the average of a chosen column
+```
+SELECT AVG(<chosen_column_name>) FROM <table_name>;
 ```
