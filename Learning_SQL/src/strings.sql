@@ -1,5 +1,5 @@
 /*
-Simplified Library
+Simplified Library Database
 CREATE TABLE books 
 	(
 		book_id INT NOT NULL AUTO_INCREMENT,
