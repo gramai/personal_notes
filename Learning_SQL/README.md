@@ -8,6 +8,7 @@ I love learning new things but I can't help forgetting some. This is why I do th
 | #   | Name                              | Programming Language    | Link                                           |
 | --- | --------------------------------- | ----------------------- | ---------------------------------------------- |
 | 1   | My first SQL problem              | SQL                     | [Github](./src/shirts_db.sql)                  |
+| 2   | String functions                  | SQL                     | [Github](./src/strings.sql)                    |
 
 ## Tips and Tricks
 Short tips and tricks that got the SQL work flowing (for me).
