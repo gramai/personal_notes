@@ -5,12 +5,12 @@ I love learning new things but I can't help forgetting some. This is why I do th
 
 # Contents 
 
-| #   | Name                              | Programming Language    | Link                                           |
-| --- | --------------------------------- | ----------------------- | ---------------------------------------------- |
-| 1   | My first SQL problem              | SQL                     | [Github](./src/shirts_db.sql)                  |
-| 2   | String functions                  | SQL                     | [Github](./src/strings.sql)                    |
-| 3   | Refined Strings                   | SQL                     | [Github](./src/refined_strings.sql)        |
-| 4   | Aggregate Functions               | SQL                     | [Github](./src/agg.sql)        |
+| #   | Name                              | About		    		| Link                                 |
+| --- | --------------------------------- | ----------------------------------- | ------------------------------------ |
+| 1   | My first SQL problem              | Basic CRUD Commands     		| [Github](./src/shirts_db.sql)        |
+| 2   | String functions                  | Strings                 		| [Github](./src/strings.sql)          |
+| 3   | Refined Strings                   | ORDER, AS, LIMIT        		| [Github](./src/refined_strings.sql)  |
+| 4   | Aggregate Functions               | COUNT, SUM, MIN/MAX, GROUP BY       | [Github](./src/agg.sql)              |
 
 ## Tips and Tricks
 Short tips and tricks that got the SQL work flowing (for me).
