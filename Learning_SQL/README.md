@@ -43,8 +43,16 @@ Short tips and tricks that got the SQL work flowing (for me).
 | DOUBLE 	  | TINY-, MEDIUM-, LONGTEXT	 | - 		|
 | BIT 		  | ENUM 		    	 | - 		|
 
+### NOTES about Data Types
+_**DECIMAL**_
 
-
+Syntax:
+```
+<column_name> DECIMAL(N,M);
+```
+- N = total number of digits the decimal number could contain
+- M = digits after decimal point
+- 
 ## Useful Commands
 
 ### For Cloud9
