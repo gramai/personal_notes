@@ -200,5 +200,11 @@ _Example_
 SELECT CHAR_LENGTH(<column_name>) FROM <table_name>;
 ```
 
+**UPPER()/LOWER()**
+_Example_
+```
+SELECT UPPER(<column_name>) FROM <table_name>;
+```
+
 
 
