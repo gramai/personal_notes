@@ -194,6 +194,7 @@ CREATE TABLE <test_table_name5> (<field_name1> INT AUTO_INCREMENT PRIMARY KEY, <
 ## USEFUL FUNCTIONS
 
 **CHAR_LENGTH()**
+
 _Example_
 
 ```
@@ -201,6 +202,7 @@ SELECT CHAR_LENGTH(<column_name>) FROM <table_name>;
 ```
 
 **UPPER()/LOWER()**
+
 _Example_
 ```
 SELECT UPPER(<column_name>) FROM <table_name>;
