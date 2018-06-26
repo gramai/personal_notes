@@ -1,4 +1,7 @@
-
+/*
+Description:
+Simple database to administrate shirts.
+*/
 -----------------------------------------------------------------------
 -- 1 Create a new database called shirts_db
 CREATE DATABASE shirts_db;
