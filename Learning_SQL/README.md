@@ -295,6 +295,16 @@ SELECT title FROM database WHERE title LIKE "%100\%%";
 -- returns titles containing "100%"
 ```
 
+**CURDATE(), CURTIME(), NOW()**
+- returns current **DATE**, **TIME** and **DATETIME** respectively 
+Syntax:
+```
+-- To print ->
+SELECT CURDATE();
+SELECT CURTIME();
+SELECT NOW();
+```
+
 ### AGGREGATE FUNCTIONS
 Aggregate Functions are functions that perform a calculation on a set of values, and returns a single value.
 
