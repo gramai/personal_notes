@@ -61,6 +61,15 @@ _**Double**_
 - Loses precision at ~14 digits. Floating-point type.
 -take up 8 Bytes of memory
 
+_**DATE**_
+- Format: 'YYYY-MM-DD'
+
+_**TIME**_
+- Format: 'HH:MM:SS'
+
+_**DATETIME**_
+- Format: 'YYYY-MM-DD HH:MM:SS'
+
 ## Useful Commands
 
 ### For Cloud9
