@@ -305,6 +305,14 @@ SELECT CURTIME();
 SELECT NOW();
 ```
 
+**DATE_FORMAT()**
+- really useful function that enables date printing
+- check [documentation](https://www.w3schools.com/sql/func_mysql_date_format.asp)
+
+Syntax:
+```
+SELECT DATE_FORMAT(<DATETIME>, '%P1(<string>)%P2(<string2>)...%PN'); 
+```
 ### AGGREGATE FUNCTIONS
 Aggregate Functions are functions that perform a calculation on a set of values, and returns a single value.
 
