@@ -318,7 +318,7 @@ SELECT NOW();
 - really useful function that enables date printing
 - check [documentation](https://www.w3schools.com/sql/func_mysql_date_format.asp)
 
-![w3schools][./img/DATE_FORMAT.png]
+![w3schools](./img/DATE_FORMAT.png)
 
 
 Syntax:
