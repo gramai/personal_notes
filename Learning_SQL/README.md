@@ -118,6 +118,7 @@ SELECT database();
 ```
 
 **SQL Files**
+
 - SQL files have the .sql extension
 - SQL files can be run from within a SQL environment using the _source_ command
 
@@ -135,6 +136,7 @@ CREATE TABLE <table_name>; -- Creates a table in the current database
 ```
 
 **READ (SELECT)**
+
 Retrieve columns _without condition_
 ```
 SELECT * FROM <table_name>; -- retrieves all columns from the chosen table
@@ -166,6 +168,7 @@ SELECT SUBSTRING(<column_name>, -start_indice_value) FROM <table_name>;
 -- -> The substring will contain the characters (string_length - start_indice_value , string_length) 
 ```
 Using _**REPLACE**_
+
 Replaces chosen part of a string
 ```
 SELECT REPLACE (string, pattern_to_replace, replace_string) FROM <table_name>; -- replaces all found patterns in the string
@@ -240,12 +243,14 @@ _Example_
 SELECT UPPER(<column_name>) FROM <table_name>;
 ```
 **DISTINCT**
+
 Returns only the unique (distinct) values.
 ```
 SELECT DISTINCT <column_name> FROM <table_name>;
 ```
 
 **ORDER BY**
+
 Returns values in ascending(DEFAULT) or descending (DESC) order.
 ```
 SELECT <column_name> FROM <table_name> ORDER BY <CHOSEN_column_name>;--ASCENDING ORDER
@@ -256,6 +261,7 @@ SELECT <column_name1>, <column_name2>,...,<column_nameN> ORDER BY M; -- M <= N, 
 ```
 
 **LIMIT**
+
 Limits the number retrieved values.
 ```
 SELECT <column_name> FROM <table> LIMIT N;--N = number of rows to show;  N <= total entries
@@ -266,6 +272,7 @@ SELECT <column_name> FROM <table> LIMIT <start_ind>, N;
 ```
 
 **LIKE**
+
 Returns the values that are similar to a given pattern.
 
 ```
@@ -295,6 +302,8 @@ SELECT title FROM database WHERE title LIKE "%100\%%";
 -- returns titles containing "100%"
 ```
 
+#### DATE AND TIME
+
 **CURDATE(), CURTIME(), NOW()**
 - returns current **DATE**, **TIME** and **DATETIME** respectively 
 Syntax:
@@ -311,8 +320,43 @@ SELECT NOW();
 
 Syntax:
 ```
-SELECT DATE_FORMAT(<DATETIME>, '%P1(<string>)%P2(<string2>)...%PN'); 
+SELECT DATE_FORMAT(<DATETIME>, '%P1(<string>)%P2(<string2>)...%PN') FROM <table_name>; 
 ```
+
+#### DATE AND TIME MATH
+
+**DATEDIFF**
+- return the difference in days between two dates
+
+Syntax:
+```
+SELECT DATEDIFF(<date1>,<date2>) FROM <table_name>;
+```
+
+**DATE_ADD**
+- adds specified interval to given date
+Syntax:
+```
+SELECT DATE_ADD(<date1>, INTERVAL <number> <interval_name>) FROM <table_name>;
+-- <interval_name> is a time interval (e.g. MONTH, HOUR, SECOND)
+-- <number> is an INT, indicates the number of intervals added to <date1>
+```
+
+**Shortcut**
+- add or substract an interval from a given date
+Syntax:
+```
+SELECT <date1> + INTERVAL <number> <interval_name> FROM <table_name>; -- addition
+SELECT <date1> - INTERVAL <number> <interval_name> FROM <table_name>; -- substraction
+```
+
+**Add (or substract) multiple intervals**
+
+Syntax:
+```
+SELECT <date1> + INTERVAL <number1> <interval_name1> + INTERVAL <number2> <interval_name2> FROM <table_name>;
+```
+
 ### AGGREGATE FUNCTIONS
 Aggregate Functions are functions that perform a calculation on a set of values, and returns a single value.
 
