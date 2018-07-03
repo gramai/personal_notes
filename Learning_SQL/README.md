@@ -323,7 +323,7 @@ Syntax:
 SELECT DATE_FORMAT(<DATETIME>, '%P1(<string>)%P2(<string2>)...%PN') FROM <table_name>; 
 ```
 
-#### DATE AND TIME MATH
+### DATE AND TIME MATH
 
 **DATEDIFF**
 - return the difference in days between two dates
@@ -355,6 +355,33 @@ SELECT <date1> - INTERVAL <number> <interval_name> FROM <table_name>; -- substra
 Syntax:
 ```
 SELECT <date1> + INTERVAL <number1> <interval_name1> + INTERVAL <number2> <interval_name2> FROM <table_name>;
+```
+
+### TIMESTAMPS
+- Same format as DATETIME but:
+- **DATETIME**:
+	- takes 8 bytes of memory 
+	- goes from year 1000 to year 9999
+	
+- **TIMESTAMP**:
+	- takes 4 bytes of memory
+	- TIMESTAMP goes from year 1970 to year 2038
+**TIMESTAMP**
+- introduced at the creation of the table
+Synatx:
+```
+CREATE TABLE <table_name> <column_name1> <data_type1>,<column_name2> TIMESTAMP DEFAULT NOW(); 
+-- <column_name1> is arbitrary
+-- <column_name2> can be something like "created_at"
+-- TIMESTAMP DEFAULT NOW() enters the (current) date and time of the newly created entry
+```
+- TIMESTAMP can be used to store the date and time one entry was modified
+Syntax:
+```
+CREATE TABLE <table_name> <column_name1> <data_type1>,<column_name2> TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP; 
+-- OR
+CREATE TABLE <table_name> <column_name1> <data_type1>,<column_name2> TIMESTAMP DEFAULT NOW() ON UPDATE NOW();
+
 ```
 
 ### AGGREGATE FUNCTIONS
