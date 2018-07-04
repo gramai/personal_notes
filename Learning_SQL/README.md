@@ -536,3 +536,6 @@ LEFT JOIN <table_name2>
 	ON <table_name1>.<field_name1> = <table_name2>.<field_name2>;
 ```
 
+**NOTE:**
+- "_ON DELETE CASCADE_" deletes specified table and all correspondent data 
+
