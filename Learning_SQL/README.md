@@ -492,6 +492,7 @@ FOREIGN KEY (<column_name>) REFERENCES <foreign_table_name>(<corresponding_colum
 	- Implicit Inner Join
 	- Explicit Inner Join
 - Left Join
+- Right Join
 
  **Cross Join**
 - prints all combinations (useless)
@@ -524,8 +525,9 @@ JOIN <table_name2>
 ```
 
 
-**Left Join**
+**Left Join - Right Join**
 - includes the whole left part of the JOIN + the common part of both parts (completes wih NULL if there is no right correspondent)
+- Right Join -> corresponds
 
 Syntax:
 ```
