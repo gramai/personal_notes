@@ -421,3 +421,10 @@ Returns the average of a chosen column
 ```
 SELECT AVG(<chosen_column_name>) FROM <table_name>;
 ```
+
+## Logical Operators
+- not equal -> "!=" 
+- are not alike -> "NOT LIKE"
+- greater than -> ">"
+- smaller than -> "<"
+- greater or equal -> ">="
