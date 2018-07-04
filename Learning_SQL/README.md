@@ -464,3 +464,52 @@ SELECT AVG(<chosen_column_name>) FROM <table_name>;
 - or -> "||" or "OR"
 - between -> "BETWEEN ... AND ..." !!! MARGINS INCLUDED !!!
 
+
+## Data Relationships
+- 1 to 1 
+- 1 to many
+- many to many
+
+**Foreign Key**
+
+Sytax:
+```
+FOREIGN KEY (<column_name>) REFERENCES <foreign_table_name>(<corresponding_column_name>);
+```
+### JOINS
+
+- Cross Join
+- Inner Join
+	- Implicit Inner Join
+	- Explicit Inner Join
+
+ **Cross Join**
+- prints all combinations (useless)
+
+Syntax:
+```
+SELECT <column_name1>,<column_name2>,...,<column_nameN> FROM <table_name1>,<table_name2>;
+```
+
+**Implicit Inner Join**
+- prints entries that match specified criteria
+- it is written implicitely (without mentioning that it is a JOIN)
+
+Syntax:
+```
+SELECT <column_name1>,<column_name2>,...,<column_nameN> FROM <table_name1>,<table_name2> 	
+	WHERE <table_name1>.<field_name1> = <table_name2>.<field_name2>;
+-- OBSERVATION !!! Any other condition can be put after "WHERE" 
+```
+
+**Explicit Inner Join**
+- prints entries that match specified criteria
+- it is written explicitly (specifying that it is a JOIN)
+
+Syntax:
+```
+SELECT <column_name1>,<column_name2>,...,<column_nameN> FROM <table_name1>
+JOIN <table_name2>
+	ON <table_name1>.<field_name1> = <table_name2>.<field_name2>;
+```
+
