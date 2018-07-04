@@ -312,6 +312,22 @@ SELECT title FROM database WHERE title LIKE "%100\%%";
 -- returns titles containing "100%"
 ```
 
+**IN**
+- returns an entry if its value matches one of the given values
+
+Syntax:
+```
+SELECT * FROM <table_name> WHERE <column_name> IN (<value1>, <value2>,..., <valueN>);
+```
+
+**CASE**
+Syntax:
+```
+CASE WHEN <condition> THEN <value1>
+     ELSE <value2>
+END
+```
+
 #### DATE AND TIME
 
 **CURDATE(), CURTIME(), NOW()**
@@ -441,11 +457,4 @@ SELECT AVG(<chosen_column_name>) FROM <table_name>;
 - and -> "&&" or "AND"
 - or -> "||" or "OR"
 - between -> "BETWEEN ... AND ..." !!! MARGINS INCLUDED !!!
-- in -> "IN"
-	- returns an entry if its value matches a value given
-
-Syntax:
-```
-SELECT * FROM <table_name> WHERE <column_name> IN (<value1>, <value2>,..., <valueN>);
-```
 
