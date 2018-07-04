@@ -50,6 +50,7 @@ Short tips and tricks that got the SQL work flowing (for me).
 ### NOTES about Data Types
 _**DECIMAL**_
 - Most precise, fixed-point type -> calculations are exact.
+
 Syntax:
 ```
 <column_name> DECIMAL(N,M);
@@ -333,6 +334,7 @@ END
 
 **CURDATE(), CURTIME(), NOW()**
 - returns current **DATE**, **TIME** and **DATETIME** respectively 
+
 Syntax:
 ```
 -- To print ->
@@ -365,6 +367,7 @@ SELECT DATEDIFF(<date1>,<date2>) FROM <table_name>;
 
 **DATE_ADD**
 - adds specified interval to given date
+
 Syntax:
 ```
 SELECT DATE_ADD(<date1>, INTERVAL <number> <interval_name>) FROM <table_name>;
@@ -374,6 +377,7 @@ SELECT DATE_ADD(<date1>, INTERVAL <number> <interval_name>) FROM <table_name>;
 
 **Shortcut**
 - add or substract an interval from a given date
+
 Syntax:
 ```
 SELECT <date1> + INTERVAL <number> <interval_name> FROM <table_name>; -- addition
@@ -406,6 +410,7 @@ CREATE TABLE <table_name> <column_name1> <data_type1>,<column_name2> TIMESTAMP D
 -- TIMESTAMP DEFAULT NOW() enters the (current) date and time of the newly created entry
 ```
 - TIMESTAMP can be used to store the date and time one entry was modified
+
 Syntax:
 ```
 CREATE TABLE <table_name> <column_name1> <data_type1>,<column_name2> TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP; 
