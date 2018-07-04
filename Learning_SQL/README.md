@@ -43,6 +43,9 @@ Short tips and tricks that got the SQL work flowing (for me).
 | DOUBLE 	  | TINY-, MEDIUM-, LONGTEXT	 | - 		|
 | BIT 		  | ENUM 		    	 | - 		|
 
+
+
+
 ### NOTES about Data Types
 _**DECIMAL**_
 - Most precise, fixed-point type -> calculations are exact.
@@ -69,6 +72,13 @@ _**TIME**_
 
 _**DATETIME**_
 - Format: 'YYYY-MM-DD HH:MM:SS'
+
+**The CAST Function**
+- changes the format (e.g. string to datetime)
+Syntax:
+```
+CAST ("<date_string>", AS <date_data_type>);
+```
 
 ## Useful Commands
 
@@ -428,3 +438,14 @@ SELECT AVG(<chosen_column_name>) FROM <table_name>;
 - greater than -> ">"
 - smaller than -> "<"
 - greater or equal -> ">="
+- and -> "&&" or "AND"
+- or -> "||" or "OR"
+- between -> "BETWEEN ... AND ..." !!! MARGINS INCLUDED !!!
+- in -> "IN"
+	- returns an entry if its value matches a value given
+
+Syntax:
+```
+SELECT * FROM <table_name> WHERE <column_name> IN (<value1>, <value2>,..., <valueN>);
+```
+
