@@ -330,6 +330,15 @@ CASE WHEN <condition> THEN <value1>
 END
 ```
 
+**ISNULL()**
+- replaces the NULL with a given value
+
+Syntax:
+```
+ISNULL(<field_name>,<replace_value>)
+```
+
+
 #### DATE AND TIME
 
 **CURDATE(), CURTIME(), NOW()**
@@ -482,6 +491,7 @@ FOREIGN KEY (<column_name>) REFERENCES <foreign_table_name>(<corresponding_colum
 - Inner Join
 	- Implicit Inner Join
 	- Explicit Inner Join
+- Left Join
 
  **Cross Join**
 - prints all combinations (useless)
@@ -510,6 +520,17 @@ Syntax:
 ```
 SELECT <column_name1>,<column_name2>,...,<column_nameN> FROM <table_name1>
 JOIN <table_name2>
+	ON <table_name1>.<field_name1> = <table_name2>.<field_name2>;
+```
+
+
+**Left Join**
+- includes the whole left part of the JOIN + the common part of both parts (completes wih NULL if there is no right correspondent)
+
+Syntax:
+```
+SELECT <column_name1>,<column_name2>,...,<column_nameN> FROM <table_name1>
+LEFT JOIN <table_name2>
 	ON <table_name1>.<field_name1> = <table_name2>.<field_name2>;
 ```
 
