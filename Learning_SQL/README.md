@@ -3,6 +3,10 @@
 ### Description
 I love learning new things but I can't help forgetting some. This is why I do this short summaries in a 'cheatsheet' like manner, to be able to keep all important details in one place. 
 
+**NOTE**
+
+While learning SQL, I have found "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert" Course on Udemy to be very useful. [Check it out](https://www.udemy.com/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert)!
+
 # Contents 
 
 | #   | Name                              | About		    		| Link                                 |
