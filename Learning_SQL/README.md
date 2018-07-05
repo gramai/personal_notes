@@ -11,8 +11,9 @@ I love learning new things but I can't help forgetting some. This is why I do th
 | 2   | String functions                  | Strings                 		| [Github](./src/strings.sql)          |
 | 3   | Refined Strings                   | ORDER, AS, LIMIT        		| [Github](./src/refined_strings.sql)  |
 | 4   | Aggregate Functions               | COUNT, SUM, MIN/MAX, GROUP BY       | [Github](./src/agg.sql)              |
-| 5   | Logical Operators                 | IN, CASE, <=>, AND, OR, NOT         | [Github](./src/log_opp.sql)              |
-| 6   | Basic Joins                       | JOIN, LEFT JOIN, RIGHT JOIN         | [Github](./src/basic_joins.sql)              |
+| 5   | Logical Operators                 | IN, CASE, <=>, AND, OR, NOT         | [Github](./src/log_opp.sql)          |
+| 6   | Basic Joins                       | INNER JOIN, LEFT JOIN, RIGHT JOIN   | [Github](./src/basic_joins.sql)      |
+| 7   | Many-to-Many                      | Multiple JOIN,INNER JOIN, L/R JOIN  | [Github](./src/many-to-many.sql)     |
 
 ## Tips and Tricks
 Short tips and tricks that got the SQL work flowing (for me).
