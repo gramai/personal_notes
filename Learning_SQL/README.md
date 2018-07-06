@@ -145,7 +145,6 @@ _**Example**_
 source <file_name>.sql; -- This is valid only if the file exists in the working directory
 source <path_to_file>/<file_name>.sql; 
 ```
-
 ## CRUD 
 **CREATE**
 ``` 
@@ -452,6 +451,9 @@ SELECT <column_name1>, <column_name2>, COUNT(*) FROM <table_name> GROUP BY <chos
 -- Each group contains elements that have the same first chosen column value and second chosen column value.
 -- The third column will contain the number of elements from each group.
 ```
+
+### !!!OBSERVATION!!!
+- "**WHERE**" can only be used BEFORE "**GROUP BY**" -> USE "**HAVING**" for grouped queries  
 
 **MIN/MAX**
 ```
