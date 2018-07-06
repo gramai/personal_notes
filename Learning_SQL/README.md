@@ -3,6 +3,10 @@
 ### Description
 I love learning new things but I can't help forgetting some. This is why I do this short summaries in a 'cheatsheet' like manner, to be able to keep all important details in one place. 
 
+**NOTE**
+
+While learning SQL, I have found "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert" Course on Udemy to be very useful. [Check it out](https://www.udemy.com/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert)!
+
 # Contents 
 
 | #   | Name                              | About		    		| Link                                 |
@@ -14,6 +18,7 @@ I love learning new things but I can't help forgetting some. This is why I do th
 | 5   | Logical Operators                 | IN, CASE, <=>, AND, OR, NOT         | [Github](./src/log_opp.sql)          |
 | 6   | Basic Joins                       | INNER JOIN, LEFT JOIN, RIGHT JOIN   | [Github](./src/basic_joins.sql)      |
 | 7   | Many-to-Many                      | Multiple JOIN,INNER JOIN, L/R JOIN  | [Github](./src/many-to-many.sql)     |
+| 8   | Instagram Clone Exercice          | Multiple JOIN,INNER JOIN, L/R JOIN  | [Github](./src/insta_exercice.sql)   |
 
 ## Tips and Tricks
 Short tips and tricks that got the SQL work flowing (for me).
@@ -141,7 +146,6 @@ _**Example**_
 source <file_name>.sql; -- This is valid only if the file exists in the working directory
 source <path_to_file>/<file_name>.sql; 
 ```
-
 ## CRUD 
 **CREATE**
 ``` 
@@ -448,6 +452,9 @@ SELECT <column_name1>, <column_name2>, COUNT(*) FROM <table_name> GROUP BY <chos
 -- Each group contains elements that have the same first chosen column value and second chosen column value.
 -- The third column will contain the number of elements from each group.
 ```
+
+### !!!OBSERVATION!!!
+- "**WHERE**" can only be used BEFORE "**GROUP BY**" -> USE "**HAVING**" for grouped queries  
 
 **MIN/MAX**
 ```
