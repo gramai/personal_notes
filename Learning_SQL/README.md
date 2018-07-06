@@ -18,6 +18,7 @@ While learning SQL, I have found "The Ultimate MySQL Bootcamp: Go from SQL Begin
 | 5   | Logical Operators                 | IN, CASE, <=>, AND, OR, NOT         | [Github](./src/log_opp.sql)          |
 | 6   | Basic Joins                       | INNER JOIN, LEFT JOIN, RIGHT JOIN   | [Github](./src/basic_joins.sql)      |
 | 7   | Many-to-Many                      | Multiple JOIN,INNER JOIN, L/R JOIN  | [Github](./src/many-to-many.sql)     |
+| 8   | Instagram Clone Exercice          | Multiple JOIN,INNER JOIN, L/R JOIN  | [Github](./src/insta_exercice.sql)   |
 
 ## Tips and Tricks
 Short tips and tricks that got the SQL work flowing (for me).
