@@ -9,10 +9,7 @@ While learning SQL, I have found "The Ultimate MySQL Bootcamp: Go from SQL Begin
 
 | #   | Name                              | About (or What's New)	        | Link                                 |
 | --- | --------------------------------- | ----------------------------------- | ------------------------------------ |
-| 1   | My first SQL problem              | Basic CRUD Commands     		| [Link-name2](.#General-Commands)        |
-
-[CONTRIBUTE](.#4---contribute)
-
+| 1   | My first SQL problem              | Basic CRUD Commands     		| [Link-name2](.#General\Commands)        |
 
 # Contents 
 
