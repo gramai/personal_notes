@@ -7,11 +7,24 @@ I love learning new things but I can't help forgetting some. This is why I do th
 
 While learning SQL, I have found "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert" Course on Udemy to be very useful. [Check it out](https://www.udemy.com/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert)!
 
-| #   | Name                              | About (or What's New)	        | Link                                 |
-| --- | --------------------------------- | ----------------------------------- | ------------------------------------ |
-| 1   | My first SQL problem              | Basic CRUD Commands     		| [here](#for-cloud9) 		       |
+# README Contents 
 
-# Contents 
+| #   | Name                              | About 			             | Link                                    |
+| --- | --------------------------------- | -----------------------------------      | --------------------------------------- |
+| 1   | Exercices list 	                  | Contains a list of some SQL exercices    | [Exercices](#exercices-list) 	       |
+| 2   | Observations and bulletpoints 	  | General informations regarding DBs       | [Observations](#general-obs-and-bulletpoints) 	 |
+| 3   | Cloud9 Commands and Misc. 	  | Starting/using/stoping MySql on C9       | [Cloud9](#cloud9-commands)	       |
+| 4   | Data Types 	  		  | Notes about data types particularities   | [Data Types](#data-types) 	       |
+| 5   | SQL environment Commands 	  | General information about DBs, tables... | [Environment](#general-commands)        |
+| 6   | CRUD 	  			  | Create, Read, Update, Delete	     | [CRUD](#crud)	 		       |
+| 7   | Functions 	  		  | Useful functions and Keywords	     | [Functions](#useful-functions)	       |
+| 8   | Date and Time  	  		  | Data Types, functions, use 		     | [DATE/TIME](#date-and-time)	       |
+| 9   | Aggregate Functions  	  	  | SUM, COUNT, MIN/MAX + others 	     | [Agg. Functions](#aggregate-functions)  |
+| 10   | Logical Operators  	  	  | !=, AND, OR, BETWEEN + others 	     | [Logical Operators](#logical-operators) |
+| 11   | Data Relationships  	  	  | 1-to-1, 1-to-many, JOINS	 	     | [Relationships](#data-relationships)    |
+| 12   | Triggers  	  	  	  | NEW, OLD 	 	     		     | [Triggers](#triggers)	 	       |
+
+# Exercices List 
 
 | #   | Name                              | About (or What's New)	        | Link                                 |
 | --- | --------------------------------- | ----------------------------------- | ------------------------------------ |
@@ -24,14 +37,9 @@ While learning SQL, I have found "The Ultimate MySQL Bootcamp: Go from SQL Begin
 | 7   | Many-to-Many                      | Multiple JOIN,INNER JOIN, L/R JOIN  | [Github](./src/many-to-many.sql)     |
 | 8   | Instagram Clone Exercice          | Big(-ish) Data, HAVING 	        | [Github](./src/insta_exercice.sql)   |
 
-## Tips and Tricks
-Short tips and tricks that got the SQL work flowing (for me).
 
-## General Observations
+## General Obs. and Bulletpoints
 - the string "<column_name1>, <column_name2>,...,<column_nameN>" (or similar) appears in some cases and it means that any existent column can or not be chosen (depends on the case). Minimum chosen column is one.
-
-## Theoretical Bulletpoints
-
 - a Database is a collection of data
 - Database != Database Management System (DBMS)
 	- Some DBMS are : PostgreSQL, MySQL, Oracle Database
@@ -39,8 +47,24 @@ Short tips and tricks that got the SQL work flowing (for me).
 - DBMS are valuable because of the unique features they offer
 - All data is stored in Tables (columns and rows)
 
-## Data Types
+### Cloud9 Commands
 
+- using Cloud9, a server can easily be used with preinstalled mysql
+
+**Start/stop MySQL**
+```
+mysql-ctl start;
+mysql-ctl stop;
+```
+
+**Start/stop MySQL Interactive Shell**
+
+```
+mysql-ctl cli;
+exit;
+```
+
+## Data Types
 
 | Numeric Types   | String Types 		 | Data Types 	|
 | --------------- | ---------------------------- | ---------- 	| 
@@ -56,9 +80,6 @@ Short tips and tricks that got the SQL work flowing (for me).
 | BIT 		  | ENUM 		    	 | - 		|
 
 
-
-
-### NOTES about Data Types
 _**DECIMAL**_
 - Most precise, fixed-point type -> calculations are exact.
 
@@ -91,23 +112,6 @@ _**DATETIME**_
 Syntax:
 ```
 CAST ("<date_string>", AS <date_data_type>);
-```
-
-## Useful Commands
-
-### For Cloud9
-
-**Start/stop MySQL**
-```
-mysql-ctl start;
-mysql-ctl stop;
-```
-
-**Start/stop MySQL Interactive Shell**
-
-```
-mysql-ctl cli;
-exit;
 ```
 
 
@@ -246,7 +250,7 @@ CREATE TABLE <test_table_name4>( <column_name1> <data_type1> PRIMARY KEY, <colum
 CREATE TABLE <test_table_name5> (<column_name1> INT AUTO_INCREMENT PRIMARY KEY, <column_name2> <data_type2> );
 ```
 
-## USEFUL FUNCTIONS
+## Useful Functions
 
 Some of the most common (and useful) functions in SQL.
 
