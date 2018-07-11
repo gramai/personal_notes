@@ -561,7 +561,8 @@ CREATE TRIGGER <trigger_name>
      BEGIN
           IF NEW.<column_name> < <value> -- that is for new entries
           THEN
-              SIGNAL SQLSTATE '45000' -- 45000 is the value of the error
+              SIGNAL SQLSTATE '45000' -- 45000 is the value of the error 
+	      -- -> errors are formed of 5 and are regulated -> read documentation
                     SET MESSAGE_TEXT = <error_text>; 
           END IF;
      END;
