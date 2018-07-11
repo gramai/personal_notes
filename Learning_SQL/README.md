@@ -548,3 +548,25 @@ LEFT JOIN <table_name2>
 **NOTE:**
 - "_ON DELETE CASCADE_" deletes specified table and all correspondent data 
 
+
+### Triggers
+- are parts of code that are run at a certain moment in order to filter the entries that have already been inserted of the entries that are in the process of insertion
+
+Syntax:
+```
+DELIMITER $$
+
+CREATE TRIGGER <trigger_name>
+     BEFORE INSERT ON <table_name> FOR EACH ROW
+     BEGIN
+          IF NEW.<column_name> < <value> -- that is for new entries
+          THEN
+              SIGNAL SQLSTATE '45000' -- 45000 is the value of the error
+                    SET MESSAGE_TEXT = <error_text>; 
+          END IF;
+     END;
+$$
+
+DELIMITER ;
+```
+
