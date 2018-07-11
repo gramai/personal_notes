@@ -7,6 +7,13 @@ I love learning new things but I can't help forgetting some. This is why I do th
 
 While learning SQL, I have found "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert" Course on Udemy to be very useful. [Check it out](https://www.udemy.com/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert)!
 
+| #   | Name                              | About (or What's New)	        | Link                                 |
+| --- | --------------------------------- | ----------------------------------- | ------------------------------------ |
+| 1   | My first SQL problem              | Basic CRUD Commands     		| [Link-name2](.#General-Commands)        |
+
+[CONTRIBUTE](.#4---contribute)
+
+
 # Contents 
 
 | #   | Name                              | About (or What's New)	        | Link                                 |
