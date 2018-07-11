@@ -571,3 +571,18 @@ $$
 DELIMITER ;
 ```
 
+**SHOW**
+- lists all active triggers from a database
+
+Syntax:
+```
+USE <database_name>;
+SHOW TRIGGERS;
+```
+
+**DROP**
+- deletes a trigger
+```
+USE <database_name>;
+DROP TRIGGER <trigger_name>;
+```
