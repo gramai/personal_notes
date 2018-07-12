@@ -8,3 +8,4 @@ This repository will be used as a notebook for all the notes I will take while l
 | --- | --------------------------------- | ----------------------- | ---------------------------------------------- |
 | 1   | Learning SQL                      | SQL                     | [Github](./Learning_SQL)                       |
 | 2   | Learning Assembly         	      | x86-Win-NASM            | [Github](./Learning_x86-Win-NASM)              |
+| 2   | Learning Selenium         	      | Java                    | [Github](./Learning_Selenium)                  |
