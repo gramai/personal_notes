@@ -78,9 +78,6 @@ sudo chmod 0755 /usr/local/bin/selenium-server-standalone.jar
 	- click on Project->Properties->Java Build Path->Libraries->Add External JARs and select the file at '/usr/local/bin/selenium-server-standalone.jar'
 	- insert the following code in the created class 
 
-**Notes**
-- change <package_name> and <class_name> to match your name of the project and your name of the class respectively
-
 ```
 package <package_name>;
 
@@ -94,19 +91,23 @@ public class <class_name>{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-//selenium code		
+		//selenium code		
 
 		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver"); //
 		ChromeOptions options = new ChromeOptions();
 //		options.addArguments("--no-sandbox");//if error -> uncomment this (bug workaround)
 		
-// ChromeDriver
+		// ChromeDriver
 		WebDriver driver = new ChromeDriver(options);
 		driver.get("http://google.com");
 
-// Write testing code here:
+		// Write testing code here:
 
 		driver.close();// closes current window
 		//or
 		//driver.quit();//closes all chrome windows opened by selenium
+
+	}
 ```
+**Notes**
+- change <package_name> and <class_name> to match your name of the project and your name of the class respectively
