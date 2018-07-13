@@ -15,6 +15,7 @@ While learning about Selenium, I have found "Selenium WebDriver with Java - Basi
 | 2   | Quick Start 	                  | Starts a chrome windows and gets the title | [Quick Start](#quick-start-for-chromedriver) 	       |
 | 3   | Xpath + CSS (with/out RegEx) 	  | Write and read XPath, CSS	       	       | [Xpath and CSS](#xpath-and-css) 	       |
 | 4   | Absolute/ relative paths 	  | sibling, parent, /selector...	       | [Paths](#absolute-relative-paths) 	       |
+| 5   | Static/Dynamic Dropdowns 	  | selectby..., automatisation		       | [Dropdowns](#Dropdowns) 	       |
 
 
 ## Debian Install
@@ -155,6 +156,9 @@ Syntax (XPath):
 
 
 ## Dropdowns
+-there are:
+	- static dropdowns
+	- dynamic dropdowns
 Syntax:
 ```
 import org.openqa.selenium.support.ui.Select;
