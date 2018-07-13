@@ -13,7 +13,8 @@ While learning about Selenium, I have found "Selenium WebDriver with Java - Basi
 | --- | --------------------------------- | ------------------------------------------ | -------------------------------------------- |
 | 1   | Debian Install 	                  | Installation Guide for Debian     	       | [Install Guide](#debian-install) 	       |
 | 2   | Quick Start 	                  | Starts a chrome windows and gets the title | [Quick Start](#quick-start-for-chromedriver) 	       |
-| 3   | Xpath + CSS (with/out RegEx 	  | Write and read XPath, CSS	       	       | [Install Guide](#xpath-and-css) 	       |
+| 3   | Xpath + CSS (with/out RegEx) 	  | Write and read XPath, CSS	       	       | [Xpath and CSS](#xpath-and-css) 	       |
+| 4   | Absolute/ relative paths 	  | sibling, parent, /selector...	       | [Paths](#absolute-relative-paths) 	       |
 
 
 ## Debian Install
@@ -133,6 +134,30 @@ Syntax:
 ```
 "tagname[attribute='value']"
 "tagName[Attribute*='value']"// RegEx
+"#id" //works for ids
+".class" //works for classes NOTE that "." replaces " " in class names
 ```
 
+## Absolute/Relative paths
 
+**Relative**
+- depends on the position and existence of a chosen element
+
+Syntax (XPath):
+```
+"//tagName[@attribute='value']/following-sibling::selector" //for a relative sibling
+"//tagName[@attribute='value']/parent::selector" // used to grab the parent
+"//tagName[@attribute='value']/selector" // used to grab a child of the chosen element
+```
+
+**Absolute**
+- doesn't depend on the position and existence of other elements
+
+
+## Dropdowns
+Syntax:
+```
+import org.openqa.selenium.support.ui.Select;
+Select s = new Select(<webdriver_element>); //webdriver element can be found by id, class, xpath, css selector etc.
+					    // s will be the dropdown object with certain methods(selectby...) 
+```
