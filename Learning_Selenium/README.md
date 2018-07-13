@@ -13,7 +13,7 @@ While learning about Selenium, I have found "Selenium WebDriver with Java - Basi
 | --- | --------------------------------- | ------------------------------------------ | -------------------------------------------- |
 | 1   | Debian Install 	                  | Installation Guide for Debian     	       | [Install Guide](#debian-install) 	       |
 | 2   | Quick Start 	                  | Starts a chrome windows and gets the title | [Quick Start](#quick-start-for-chromedriver) 	       |
-| 3   | Xpath + CSS Formatting 	          | Write and read Xpath, CSS	      	       | [Install Guide](#xpath-and-css) 	       |
+| 3   | Xpath + CSS (with/out RegEx 	  | Write and read XPath, CSS	       	       | [Install Guide](#xpath-and-css) 	       |
 
 
 ## Debian Install
@@ -120,6 +120,7 @@ public class <class_name>{
 Syntax:
 ```
 "//tagName[@attribute='value']"
+"//tagName[@contains(@attribute,'value')]" //Regular Expression 
 ```
 - to check if XPath for the element is ok, use the JavaScript console ( CTRL+Shift+C -> Console) and write the following:
 ```
@@ -130,5 +131,8 @@ $x("<XPath>")
 
 Syntax:
 ```
-tagname[attribute='value']
+"tagname[attribute='value']"
+"tagName[Attribute*='value']"// RegEx
 ```
+
+
